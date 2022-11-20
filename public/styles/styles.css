@@ -27,7 +27,7 @@ MAIN COLOR: hsl(231, 69%, 60%)
 TINTS: 
 SHADES: hsl(229, 31%, 21%)
 ACCENTS: Soft Red: hsl(0, 94%, 66%)
-GREY COLOR: hsl(229, 8%, 60%), #333;
+GREY COLOR: hsl(229, 8%, 60%), #333, #d3d4d9,  #f4f4f6, #e9eaec
 
 -- 05 SHADOWS
  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.08);
@@ -89,6 +89,7 @@ body {
   letter-spacing: 0.5px;
   font-weight: 500;
   line-height: 1.05;
+  text-align: center;
 }
 
 .section-description {
@@ -268,11 +269,7 @@ body {
 /* FEATURES SECTION */
 /******************************/
 .section-features {
-  padding: 0 0 6.4rem;
-}
-
-.heading-features {
-  text-align: center;
+  padding: 9.6rem 0;
 }
 
 .container figure {
@@ -302,11 +299,11 @@ blockquote {
   box-shadow: inset 0 -4px 4px -4px #d3d4d9;
   margin-right: -5px;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .pane:hover {
   color: hsl(0, 94%, 66%);
-  cursor: pointer;
 }
 
 .pane--fill {
@@ -393,10 +390,6 @@ blockquote {
   padding: 9.6rem 0;
 }
 
-.heading-cta {
-  text-align: center;
-}
-
 .cta {
   max-width: 120rem;
   margin: 0 auto;
@@ -477,4 +470,80 @@ blockquote {
   background-color: #fff;
   color: hsl(231, 69%, 60%);
   border: 2px solid hsl(231, 69%, 60%);
+}
+
+/******************************/
+/* FAQ SECTION */
+/******************************/
+.section-faq {
+  padding: 9.6rem 0;
+}
+
+.accordion {
+  width: 70rem;
+  margin: 0 auto;
+  row-gap: 0;
+}
+
+.item {
+  border-bottom: 2px solid #e9eaec;
+  padding: 1.6rem;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 2.4rem;
+  row-gap: 3.2rem;
+  align-items: center;
+}
+
+.item:first-child {
+  border-top: 2px solid #e9eaec;
+}
+
+.accordion-icon {
+  cursor: pointer;
+}
+
+.icon-down {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: hsl(231, 69%, 60%);
+}
+
+.icon-up {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: hsl(0, 94%, 66%);
+}
+
+.text {
+  color: hsl(229, 31%, 21%);
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  line-height: 1.05;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.text:hover {
+  color: hsl(0, 94%, 66%);
+}
+
+.hidden-box {
+  display: none;
+}
+
+.hidden-box p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.section-faq .btn {
+  justify-self: center;
+}
+
+/* OPEN STATE */
+
+.open .hidden-box {
+  display: block;
 }

@@ -1,3 +1,7 @@
+/******************************/
+/* CAROUSEL */
+/******************************/
+
 const track = document.querySelector(".carousel-track");
 const slides = [...track.children];
 const panesNav = document.querySelector(".nav-panes");
@@ -40,3 +44,54 @@ panesNav.addEventListener("click", (e) => {
   // Move to pane btn
   updatePaneBtn(currentPane, targetPane);
 });
+
+/******************************/
+/* ACCORDION */
+/******************************/
+
+const faqHeading = document.querySelectorAll(".text");
+const headings = [...faqHeading];
+const faqIcon = document.querySelectorAll(".accordion-icon");
+const icons = [...faqIcon];
+const accordion = document.querySelector(".accordion");
+const items = [...accordion.children];
+
+function accordionToggle(item) {
+  // togle staus of FAQ item
+  const icon = item.children[1];
+  item.classList.toggle("open");
+
+  if (item.classList.contains("open")) {
+    icon.classList.add("icon-up");
+    icon.classList.remove("icon-down");
+    icon.setAttribute("name", "chevron-up-outline");
+  } else {
+    icon.classList.add("icon-down");
+    icon.classList.remove("icon-up");
+    icon.setAttribute("name", "chevron-down-outline");
+  }
+}
+
+document.addEventListener("click", (e) => {
+  // what faq heading was clicked?
+  if (e.target.matches(".accordion .text")) {
+    const targetIndex = headings.findIndex((heading) => heading === e.target);
+    accordionToggle(items[targetIndex]);
+  }
+
+  if (e.target.matches(".accordion .accordion-icon")) {
+    const targetIndex = icons.findIndex((icon) => icon === e.target);
+    accordionToggle(items[targetIndex]);
+  }
+});
+
+/***Alternative***/
+// faqHeading.forEach((heading, i) => {
+//   heading.addEventListener("click", (e) => {
+//     accordionToggle(items[i]);
+//   });
+
+//   faqIcon[i].addEventListener("click", (e) => {
+//     accordionToggle(items[i]);
+//   });
+// });
