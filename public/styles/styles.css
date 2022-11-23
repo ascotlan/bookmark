@@ -51,6 +51,7 @@ SPACING SYSTEM (px)
 
 html {
   font-size: 62.5%; /* 10px / default(16px) */
+  overflow-x: hidden;
 }
 
 body {
@@ -622,7 +623,7 @@ blockquote {
 /******************************/
 
 .footer {
-  padding: 3.2rem;
+  padding: 3.2rem 0;
   background-color: #191f43;
 }
 
@@ -637,9 +638,6 @@ blockquote {
   align-items: center;
   justify-content: center;
   gap: 6.4rem;
-}
-
-.footer-logo-img {
 }
 
 .footer-list-item:link,
