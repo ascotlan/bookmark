@@ -85,7 +85,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-/***Alternative***/
+/***Alternative but less efficient***/
 // faqHeading.forEach((heading, i) => {
 //   heading.addEventListener("click", (e) => {
 //     accordionToggle(items[i]);
@@ -95,3 +95,29 @@ document.addEventListener("click", (e) => {
 //     accordionToggle(items[i]);
 //   });
 // });
+
+///////////////////////////////////////////////////////////
+//Smooth scrolling animation
+
+// select all anchor elements with the href property
+const allLinks = document.querySelectorAll("a:link");
+
+allLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+    //Scroll back to top
+    if (href === "#") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+
+    //scrool to other links
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});

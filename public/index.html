@@ -17,43 +17,40 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
     <title>Bookmark landing page</title>
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    <header class="header">
-      <a href="#">
-        <img
-          class="logo-img"
-          src="./images/logo-bookmark.svg"
-          alt="Bookmark logo"
-        />
-      </a>
-      <nav class="header-nav">
-        <ul class="header-nav-list">
-          <li>
-            <a href="#features" class="header-list-item">Features</a>
-          </li>
-          <li>
-            <a href="#pricing" class="header-list-item">Pricing</a>
-          </li>
+    <header class="container">
+      <div class="header">
+        <a href="#">
+          <img
+            class="logo-img"
+            src="./images/logo-bookmark.svg"
+            alt="Bookmark logo"
+          />
+        </a>
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li>
+              <a href="#features" class="header-list-item">Features</a>
+            </li>
+            <li>
+              <a href="#pricing" class="header-list-item">Pricing</a>
+            </li>
 
-          <li>
-            <a href="#contact" class="header-list-item">Contact</a>
-          </li>
-          <li>
-            <a href="#" class="header-list-item login">Login</a>
-          </li>
-        </ul>
-      </nav>
+            <li>
+              <a href="#contact" class="header-list-item">Contact</a>
+            </li>
+            <li>
+              <a href="#" class="header-list-item login">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -69,8 +66,8 @@
               for free.
             </p>
             <div class="btn-box">
-              <a class="btn btn-full-blue" href="#"> Get it on Chrome</a>
-              <a class="btn btn-full-gray" href="#"> Get it on Firefox</a>
+              <a class="btn btn-full-blue" href="#cta"> Get it on Chrome</a>
+              <a class="btn btn-full-gray" href="#cta"> Get it on Firefox</a>
             </div>
           </div>
           <div class="hero-img-box">
@@ -82,7 +79,7 @@
           </div>
         </div>
       </section>
-      <section class="section-features">
+      <section class="section-features" id="features">
         <div class="container grid grid-col--1">
           <figure class="grid grid-col--1">
             <h2 class=" heading-secondary">
@@ -120,7 +117,7 @@
                       drag-and-drop interface gives you complete control over
                       how you manage your favourite sites.
                     </p>
-                    <a class="btn btn-more-info" href="#"> More Info</a>
+                    <a class="btn btn-more-info" href="#contact"> More Info</a>
                   </div>
                 </li>
                 <li class="carousel-slide grid grid-col--2">
@@ -138,7 +135,7 @@
                       in no time at all. No need to trawl through all of your
                       bookmarks.
                     </p>
-                    <a class="btn btn-more-info" href="#"> More Info</a>
+                    <a class="btn btn-more-info" href="#contact"> More Info</a>
                   </div>
                 </li>
                 <li class=" carousel-slide grid grid-col--2">
@@ -156,7 +153,7 @@
                       Create a shareable link that you can send at the click of
                       a button.
                     </p>
-                    <a class="btn btn-more-info" href="#"> More Info</a>
+                    <a class="btn btn-more-info" href="#contact"> More Info</a>
                   </div>
                 </li>
               </ul>
@@ -164,7 +161,7 @@
           </div>
         </div>
       </section>
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container grid grid-col--1">
           <figure class="grid grid-col--1">
             <h2 class="heading-secondary ">
@@ -321,18 +318,46 @@
               </div>
             </div>
           </div>
-          <a class="btn btn-more-info" href="#"> More Info</a>
+          <a class="btn btn-more-info" href="#contact"> More Info</a>
         </div>
       </section>
+      <section class="section-contact" id="contact">
+        <p class="sub-heading">35,000+ already joined</p>
+        <h2 class="heading-secondary">
+          Stay up-to-date with what we’re doing
+        </h2>
+        <form action="contact-form" name="contact" netlify>
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            name="email"
+            required
+          />
+          <button class=" btn-form">Contact Us</button>
+        </form>
+      </section>
     </main>
-
-    <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Antonio Scotland</a>.
-      </p>
+    <footer class="footer">
+      <div class="container footer-container">
+        <nav class="footer-nav">
+          <a class="footer-logo-img" href="#"
+            ><img src="./images/logo-bookmark.svg" alt="company logo"
+          /></a>
+          <ul class="footer-nav-list">
+            <li><a class="footer-list-item" href="#features">Features</a></li>
+            <li><a class="footer-list-item" href="#pricing">Pricing</a></li>
+            <li><a class="footer-list-item" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="social-media">
+          <a class="social-link" href="#"
+            ><img src="./images/icon-facebook.svg" alt="facebook"
+          /></a>
+          <a class="social-link" href="#"
+            ><img src="./images/icon-twitter.svg" alt="twitter"
+          /></a>
+        </div>
+      </div>
     </footer>
     <script
       type="module"

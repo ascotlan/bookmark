@@ -20,6 +20,7 @@ Large: 1.8
 -0.5px
 0.5px
 0.75px
+3.5px;
 
 --- 02 COLORS
 
@@ -122,12 +123,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  /* Because we want it to be sticky later */
-  padding: 0 4.8rem;
-  height: 9.6rem;
+  padding: 4.8rem 0;
 }
 
+.footer-logo-img,
 .logo-img {
   height: 2.5rem;
   width: 14.8rem;
@@ -138,7 +137,8 @@ body {
 /* NAVIGATION */
 /******************************/
 
-.header-nav-list {
+.header-nav-list,
+.footer-nav-list {
   display: flex;
   gap: 4.8rem;
   list-style: none;
@@ -147,13 +147,19 @@ body {
 }
 
 .header-list-item:link,
-.header-list-item:visited {
+.header-list-item:visited,
+.footer-list-item:link,
+.footer-list-item:visited {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.75px;
-  color: #333;
   transition: all 0.3s;
+}
+
+.header-list-item:link,
+.header-list-item:visited {
+  color: #333;
 }
 
 .header-list-item:hover,
@@ -480,7 +486,8 @@ blockquote {
 }
 
 .accordion {
-  width: 70rem;
+  max-width: 70rem;
+  width: 100%;
   margin: 0 auto;
   row-gap: 0;
 }
@@ -546,4 +553,121 @@ blockquote {
 
 .open .hidden-box {
   display: block;
+}
+
+/******************************/
+/* CONTACT SECTION */
+/******************************/
+
+.section-contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: hsl(231, 69%, 60%);
+  align-items: center;
+  justify-items: center;
+  padding: 4.8rem;
+  row-gap: 2.4rem;
+}
+
+.sub-heading {
+  color: #fff;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.section-contact .heading-secondary {
+  max-width: 40rem;
+  color: #fff;
+}
+
+.section-contact form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 3.2rem;
+}
+
+.section-contact form input,
+.section-contact .btn-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2.4rem;
+  border-radius: 5px;
+  border: none;
+  font-family: inherit;
+}
+
+.section-contact .btn-form {
+  background-color: hsl(0, 94%, 66%);
+  color: #fff;
+  font-weight: 500;
+  border: 2px inset transparent;
+  transition: all 0.3s;
+}
+
+.section-contact .btn-form:hover {
+  background-color: #fff;
+  color: hsl(0, 94%, 66%);
+  border: 2px inset hsl(0, 94%, 66%);
+}
+
+.section-contact *:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(0, 94%, 66%);
+}
+
+/******************************/
+/* FOOTER SECTION */
+/******************************/
+
+.footer {
+  padding: 3.2rem;
+  background-color: #191f43;
+}
+
+.container.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.4rem;
+}
+
+.footer-logo-img {
+}
+
+.footer-list-item:link,
+.footer-list-item:visited {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.footer-list-item:hover,
+.footer-list-item:active {
+  color: hsl(0, 94%, 66%);
+  cursor: pointer;
+}
+
+footer .social-media {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.social-link:link,
+.social-link:visited {
+  filter: grayscale(0);
+  transition: all 3s;
+}
+
+.social-link:hover,
+.social-link:active {
+  filter: invert(48%) sepia(19%) saturate(6680%) hue-rotate(329deg)
+    brightness(101%) contrast(95%);
 }
