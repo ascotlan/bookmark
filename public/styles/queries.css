@@ -38,11 +38,38 @@ Instead, 1rem = 1em = 16px */
 /* BELOW 1152px (Landscape tablets) */
 /******************************/
 @media (max-width: 72em) {
+  .header-list-item,
+  .hero-description,
+  .section-description,
+  .pane-description,
+  .hidden-box p {
+    font-size: 1.6rem;
+  }
+  .section-description {
+    padding: 0 19rem;
+  }
   .carousel-panes {
     margin-bottom: 25rem;
   }
+
+  .cta {
+    column-gap: 3.2rem;
+  }
+
+  .cta-card-details {
+    padding: 1.6rem 2.4rem 0;
+  }
+
+  .cta-btn-container {
+    padding: 0 2.4rem 3.2rem;
+  }
 }
 
+/******************************/
+/* BELOW 992px (Tablets) */
+/******************************/
+@media (max-width: 62em) {
+}
 /*
 FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
