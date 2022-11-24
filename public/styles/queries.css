@@ -38,6 +38,14 @@ Instead, 1rem = 1em = 16px */
 /* BELOW 1152px (Landscape tablets) */
 /******************************/
 @media (max-width: 72em) {
+  .section-hero {
+    padding: 4.8rem 0 6.4rem 0;
+  }
+
+  .section-features {
+    padding: 6.4rem 0;
+  }
+
   .header-list-item,
   .hero-description,
   .section-description,
@@ -45,9 +53,11 @@ Instead, 1rem = 1em = 16px */
   .hidden-box p {
     font-size: 1.6rem;
   }
+
   .section-description {
     padding: 0 19rem;
   }
+
   .carousel-panes {
     margin-bottom: 25rem;
   }
