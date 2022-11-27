@@ -79,6 +79,17 @@ Instead, 1rem = 1em = 16px */
 /* BELOW 992px (Tablets) */
 /******************************/
 @media (max-width: 62em) {
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-card-info.firefox {
+    transform: translateY(0%);
+  }
+
+  .cta-card-info.opera {
+    transform: translateY(0%);
+  }
 }
 /*
 FONT SIZE SYSTEM (px)
