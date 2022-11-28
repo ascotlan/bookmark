@@ -79,6 +79,39 @@ Instead, 1rem = 1em = 16px */
 /* BELOW 992px (Tablets) */
 /******************************/
 @media (max-width: 62em) {
+  .hero {
+    grid-template-columns: 1fr;
+    row-gap: 6.4rem;
+  }
+
+  .hero-text-box {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-img-box {
+    grid-row: 1/-1;
+  }
+
+  .section-description {
+    padding: 0 11rem;
+  }
+
+  .carousel {
+    row-gap: 6.4rem;
+  }
+
+  .nav-panes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .section-cta,
+  .section-faq {
+    padding: 6.4rem 0;
+  }
+
   .cta {
     grid-template-columns: 1fr;
   }
@@ -90,6 +123,17 @@ Instead, 1rem = 1em = 16px */
   .cta-card-info.opera {
     transform: translateY(0%);
   }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .footer-nav {
+    gap: 12.8rem;
+  }
+
+  /*MOBILE NAVIGATION*/
 }
 /*
 FONT SIZE SYSTEM (px)
