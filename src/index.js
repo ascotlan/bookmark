@@ -1,4 +1,14 @@
 /******************************/
+/* MOBILE NAVIGATION */
+/******************************/
+const headerEl = document.querySelector(".header");
+const mobileNavBtnEl = document.querySelector(".btn-mobile-nav");
+
+mobileNavBtnEl.addEventListener("click", () => {
+  headerEl.classList.toggle("nav-open");
+});
+
+/******************************/
 /* CAROUSEL */
 /******************************/
 
@@ -118,6 +128,11 @@ allLinks.forEach((link) => {
     if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
+
+    //close mobile navigation
+    if (link.classList.contains("header-list-item")) {
+      headerEl.classList.toggle("nav-open");
     }
   });
 });

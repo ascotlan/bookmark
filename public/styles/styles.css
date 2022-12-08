@@ -125,6 +125,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 4.8rem 0;
+
+  position: relative;
 }
 
 .footer-logo-img,
@@ -187,6 +189,25 @@ body {
   border-radius: 5px;
   color: hsl(0, 94%, 66%);
   background-color: #fff;
+}
+
+/*MOBILE*/
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.mobile-nav-open,
+.mobile-nav-close {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.mobile-nav-close {
+  display: none;
 }
 
 /******************************/
