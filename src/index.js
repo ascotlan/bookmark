@@ -131,7 +131,10 @@ allLinks.forEach((link) => {
     }
 
     //close mobile navigation
-    if (link.classList.contains("header-list-item")) {
+    if (
+      link.classList.contains("header-list-item") ||
+      link.classList.contains("hidden-link")
+    ) {
       headerEl.classList.toggle("nav-open");
     }
   });
