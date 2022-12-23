@@ -473,6 +473,7 @@ blockquote {
 
 .cta-svg {
   width: 8rem;
+  height: 7.8rem;
   margin-bottom: 1.6rem;
 }
 
@@ -487,6 +488,8 @@ blockquote {
 }
 
 .dotted-img {
+  width: 100%;
+  height: 100%;
   padding-top: 1.6rem;
 }
 
@@ -684,6 +687,11 @@ blockquote {
 .footer-list-item:active {
   color: hsl(0, 94%, 66%);
   cursor: pointer;
+}
+
+footer .social-link img {
+  height: 2.4rem;
+  width: 2.4rem;
 }
 
 footer .social-link:link,
